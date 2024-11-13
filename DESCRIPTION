@@ -1,0 +1,20 @@
+Package: unhcrwash
+Type: Package
+Title: WASH Data From Refugee Camps and Settlements (UNHCR)
+Version: 0.1.0
+Author: Yash Dubey
+Maintainer: Yash Dubey <ydubey@ethz.cht>
+Description: This is a dataset on WASH indicators in refugee camps and settlements. The data is collected from the UNHCR Information Management System (IRIS) and is available on the UNHCR WASH dashboard. This dataset includes data from 191 sites and 29 countries.
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 2.10)
+Language: en-GB
+Config/Needs/website: rmarkdown
+Date: 2024-11-13
+URL: https://github.com/openwashdata/unhcrwash
+BugReports: https://github.com/openwashdata/unhcrwash/issues
+Authors@R: 
+    person("Yash", "Dubey", , "ydubey@ethz.ch",
+           comment = c(ORCID = "0009-0001-2849-970X"))
