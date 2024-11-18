@@ -1,0 +1,3 @@
+fileName,name,contentUrl,encodingFormat
+unhcrwash.csv,unhcrwash,https://raw.githubusercontent.com/openwashdata/unhcrwash/main/inst/extdata/unhcrwash.csv,csv
+unhcrwash.xlsx,unhcrwash,https://raw.githubusercontent.com/openwashdata/unhcrwash/main/inst/extdata/unhcrwash.xlsx,ooxml

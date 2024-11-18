@@ -1,0 +1,28 @@
+directory,file_name,variable_name,variable_type,description
+data,unhcrwash.rda,form_id,double,Unique Identifier for the form
+data,unhcrwash.rda,date_start,double,Start Date for the data collection
+data,unhcrwash.rda,date_end,double,End date for the data collection
+data,unhcrwash.rda,location_id,double,Unique Identifier for the location of the refugee camp
+data,unhcrwash.rda,location_name,character,Name of the location of the refugee camp
+data,unhcrwash.rda,country_name,character,Country in which the refugee camp is located
+data,unhcrwash.rda,emergency_post_emergency,character,If emergency is ongoing or not (Emergency / Post Emergency)
+data,unhcrwash.rda,number_of_persons_per_usable_handpump_well_spring,double,No. of persons per usable handpump well spring
+data,unhcrwash.rda,number_of_persons_per_usable_water_tap,double,Number of persons per unit of usable tap water source
+data,unhcrwash.rda,average_number_liters_of_potable_water_available_per_person_per_day,double,Average number of litres of potable water available per person per day
+data,unhcrwash.rda,percent_water_quality_tests_at_non_chlorinated_water_collection_locations_with_0_cfu_100ml,double,Percentage of water quality tests conducted at non-chlorinated water collection points that returned results with 0 colony-forming units (CFU) per 100 milliliters
+data,unhcrwash.rda,percent_of_water_quality_tests_at_chlorinated_collection_locations_with_frc_in_the_range_0_2_2mg_l_and_turbidity_5ntu5,double,"Percentage of water quality tests at chlorinated collection points where the Free Residual Chlorine (FRC) levels were within the range of 0.2 to 2 mg/L, and turbidity was less than or equal to 5 NTU (Nephelometric Turbidity Units)"
+data,unhcrwash.rda,percent_households_with_household_toilet_latrine_monthly,double,"Percentage of households that have access to a household toilet or latrine, evaluated on a monthly basis"
+data,unhcrwash.rda,number_of_persons_per_toilet_latrine,double,Number of persons per toilet latrine
+data,unhcrwash.rda,number_of_persons_per_bath_shelter_shower,double,Number of persons per bath shower
+data,unhcrwash.rda,number_of_persons_per_hygiene_promoter,double,Number of persons per hygiene promoter
+data,unhcrwash.rda,refugee_population,double,Refugee Population
+data,unhcrwash.rda,reporting_period_monthly_indicator,double,Monthly  Reporting Period Indicator
+data,unhcrwash.rda,average_number_l_p_d_of_potable_water_collected_at_household_level,double,Average water (litres) collected per household per day
+data,unhcrwash.rda,percent_households_with_at_least_10_liters_person_potable_water_storage_capacity,double,Percentage of households with at least 10 litres of water storage capacity
+data,unhcrwash.rda,percent_households_collecting_drinking_water_from_protected_treated_sources,double,Percentage of households collecting water from sheltered and treated sources
+data,unhcrwash.rda,percent_of_women_of_reproductive_age_who_are_satisfied_with_menstrual_hygiene_management_materials_and_facilities,double,Percentage of women of reproductive age satisfied with facilities for management of menstrual hygiene and waste
+data,unhcrwash.rda,percent_households_with_household_toilet_latrine,double,Percentage of households with a latrine
+data,unhcrwash.rda,percent_households_reporting_defecating_in_a_toilet,double,Percentage of households defecating in a toilet
+data,unhcrwash.rda,percent_households_with_access_to_soap,double,Percentage of households with access to soap
+data,unhcrwash.rda,percent_households_with_access_to_solid_waste_disposal_facility,double,Percentage of households with access to a waste disposal facility
+data,unhcrwash.rda,reporting_period_annual_indicator,double,Annual Reporting Period Indicator
