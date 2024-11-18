@@ -110,7 +110,8 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ```{r}
 library(unhcrwash)
 
-# Provide some example code here
+#Examples
+
 ```
 
 
