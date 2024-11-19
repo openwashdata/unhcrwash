@@ -1,0 +1,36 @@
+{
+  "@context": "https://openwashdata.org/",
+  "@type": "Dataset",
+  "name": "unhcrwash",
+  "description": "This is a dataset on WASH indicators in refugee camps and settlements. The data is collected from the UNHCR Information Management System (IRIS) and is available on the UNHCR WASH dashboard. This dataset includes data from 191 sites and 29 countries.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "openwashdata @ Global Health Engineering, ETH Zurich",
+    "url": "https://openwashdata.org/"
+  },
+  "datePublished": "2024-11-19",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": "refugee camps, unhcr, wash indicators, iris",
+  "distribution": {
+    "@type": "DataDownload",
+    "url": "https://raw.githubusercontent.com/openwashdata/unhcrwash/main/inst/extdata/unhcrwash.csv",
+    "contentUrl": "https://raw.githubusercontent.com/openwashdata/unhcrwash/main/inst/extdata/unhcrwash.csv",
+    "encodingFormat": "text/csv"
+  },
+  "encodingFormat": "CSV",
+  "version": "1.0",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "worldwide"
+  },
+  "temporalCoverage": {
+    "@type": "DateTime",
+    "startDate": "30.09.2013",
+    "endDate": "31.12.2024"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Yash Dubey",
+    "email": "ydubey@ethz.ch"
+  }
+}

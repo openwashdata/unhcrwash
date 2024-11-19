@@ -29,6 +29,7 @@ knitr::opts_chunk$set(
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14185117.svg)](https://zenodo.org/doi/10.5281/zenodo.14185117)
 <!-- badges: end -->
 
 The goal of unhcrwash is to make available data on WASH indicators in refugee camps and settlements.
