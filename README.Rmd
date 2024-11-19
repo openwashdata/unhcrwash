@@ -110,8 +110,40 @@ readr::read_csv("data-raw/dictionary.csv") |>
 ```{r}
 library(unhcrwash)
 
-#Examples
+# Average Water Availability by Country 
+unhcrwash |> dplyr::group_by(country) |> 
+  dplyr::summarise(avg_water_avail = mean(liters_per_person_per_day, na.rm = TRUE)) |> 
+  dplyr::arrange(desc(avg_water_avail)) |> 
+  head(5) |> 
+  gt::gt() |> 
+  gt::as_raw_html()
+```
 
+```{r}
+library(ggplot2)
+# Toilet availability
+unhcrwash |> 
+  dplyr::mutate(year = lubridate::year(as.Date(start_date))) |>  # Extract year as whole number
+  dplyr::filter(!is.na(year) & !is.na(persons_per_toilet)) |>    # Remove missing values
+  dplyr::group_by(year) |> 
+  dplyr::summarise(avg_persons_per_toilet = mean(persons_per_toilet, na.rm = TRUE)) |> 
+  ggplot2::ggplot(aes(x = year, y = avg_persons_per_toilet)) +
+  ggplot2::geom_line() +
+  ggplot2::labs(title = "Average Persons per Toilet in Refugee Camps",
+                x = "Year",
+                y = "Average persons per toilet") +
+  ggplot2::theme_minimal()
+```
+
+```{r}
+# Countries with highest refugee populations
+unhcrwash |> 
+  dplyr::group_by(country) |> 
+  dplyr::summarise(total_population = sum(refugee_pop, na.rm = TRUE)) |> 
+  dplyr::arrange(desc(total_population)) |> 
+  head(5) |> 
+  gt::gt() |> 
+  gt::as_raw_html()
 ```
 
 
