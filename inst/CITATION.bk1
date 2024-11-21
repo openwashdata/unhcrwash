@@ -1,9 +1,0 @@
-
-bibentry(bibtype = "Misc",
-         key = "unhcrwashwash:2024",
-         title = "unhcrwash: WASH Data From Refugee Camps and Settlements (UNHCR)",
-         year = "2024",
-         doi = "10.5281/zenodo.14185117",
-         url = "https://github.com/openwashdata/unhcrwash",
-         abstract = "This is a dataset on WASH indicators in refugee camps and settlements. The data is collected from the UNHCR Information Management System (IRIS) and is available on the UNHCR WASH dashboard. This dataset includes data from 191 sites and 29 countries.",
-         version = "0.1.0")

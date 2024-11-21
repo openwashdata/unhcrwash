@@ -19,3 +19,4 @@ Authors@R:
     person("Yash", "Dubey", , "ydubey@ethz.ch", 
            role = c("aut", "cre"), 
            comment = c(ORCID = "0009-0001-2849-970X"))
+RoxygenNote: 7.3.2
