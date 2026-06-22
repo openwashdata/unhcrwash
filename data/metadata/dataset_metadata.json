@@ -18,7 +18,7 @@
     "encodingFormat": "text/csv"
   },
   "encodingFormat": "CSV",
-  "version": "0.2.0",
+  "version": "1.1.0",
   "spatialCoverage": {
     "@type": "Place",
     "name": "worldwide"
