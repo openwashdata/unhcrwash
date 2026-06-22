@@ -3,43 +3,48 @@
 \docType{data}
 \name{unhcrwash}
 \alias{unhcrwash}
-\title{unhcrwash: Refugee Camp WASH indicators data from United Nations Human Rights Commission}
+\title{unhcrwash: Refugee Camp WASH indicators data from the United Nations High Commissioner for Refugees}
 \format{
 A tibble with 6425 rows and 27 variables
 \describe{
   \item{form_id}{Unique Identifier for the form}
-  \item{date_start}{Start Date for the data collection}
-  \item{date_end}{End date for the data collection}
+  \item{start_date}{Start Date for the data collection}
+  \item{end_date}{End date for the data collection}
   \item{location_id}{Unique Identifier for the location of the refugee camp}
   \item{location_name}{Name of the location of the refugee camp}
-  \item{country_name}{Country in which the refugee camp is located}
-  \item{emergency_post_emergency}{If emergency is ongoing or not (Emergency / Post Emergency)}
-  \item{number_of_persons_per_usable_handpump_well_spring}{No. of persons per usable handpump well spring}
-  \item{number_of_persons_per_usable_water_tap}{Number of persons per unit of usable tap water source}
-  \item{average_number_liters_of_potable_water_available_per_person_per_day}{Average number of litres of potable water available per person per day}
-  \item{percent_water_quality_tests_at_non_chlorinated_water_collection_locations_with_0_cfu_100ml}{Percentage of water quality tests conducted at non-chlorinated water collection points that returned results with 0 colony-forming units (CFU) per 100 milliliters}
-  \item{percent_of_water_quality_tests_at_chlorinated_collection_locations_with_frc_in_the_range_0_2_2mg_l_and_turbidity_5ntu5}{Percentage of water quality tests at chlorinated collection points where the Free Residual Chlorine (FRC) levels were within the range of 0.2 to 2 mg/L, and turbidity was less than or equal to 5 NTU (Nephelometric Turbidity Units)}
-  \item{percent_households_with_household_toilet_latrine_monthly}{Percentage of households that have access to a household toilet or latrine, evaluated on a monthly basis}
-  \item{number_of_persons_per_toilet_latrine}{Number of persons per toilet latrine}
-  \item{number_of_persons_per_bath_shelter_shower}{Number of persons per bath shower}
-  \item{number_of_persons_per_hygiene_promoter}{Number of persons per hygiene promoter}
-  \item{refugee_population}{Refugee Population}
-  \item{reporting_period_monthly_indicator}{Monthly? Reporting Period Indicator}
-  \item{average_number_l_p_d_of_potable_water_collected_at_household_level}{Average water (litres) collected per household per day}
-  \item{percent_households_with_at_least_10_liters_person_potable_water_storage_capacity}{Percentage of households with at least 10 litres of water storage capacity}
-  \item{percent_households_collecting_drinking_water_from_protected_treated_sources}{Percentage of households collecting water from sheltered and treated sources}
-  \item{percent_of_women_of_reproductive_age_who_are_satisfied_with_menstrual_hygiene_management_materials_and_facilities}{Percentage of women of reproductive age satisfied with facilities for management of menstrual hygiene and waste}
-  \item{percent_households_with_household_toilet_latrine}{Percentage of households with a latrine}
-  \item{percent_households_reporting_defecating_in_a_toilet}{Percentage of households defecating in a toilet}
-  \item{percent_households_with_access_to_soap}{Percentage of households with access to soap}
-  \item{percent_households_with_access_to_solid_waste_disposal_facility}{Percentage of households with access to a waste disposal facility}
-  \item{reporting_period_annual_indicator}{Annual Reporting Period Indicator}
+  \item{country}{Country in which the refugee camp is located}
+  \item{post_emergency}{If emergency is ongoing or not (Emergency / Post Emergency)}
+  \item{persons_per_handpump}{No. of persons per usable handpump well spring}
+  \item{persons_per_tap}{Number of persons per unit of usable tap water source}
+  \item{liters_per_person_per_day}{Average number of litres of potable water available per person per day}
+  \item{non_chlorinated_0_cfu}{Percentage of water quality tests conducted at non-chlorinated water collection points that returned results with 0 colony-forming units (CFU) per 100 milliliters}
+  \item{chlorinated_safe_water_quality}{Percentage of water quality tests at chlorinated collection points where the Free Residual Chlorine (FRC) levels were within the range of 0.2 to 2 mg/L, and turbidity was less than or equal to 5 NTU (Nephelometric Turbidity Units)}
+  \item{households_with_toilet}{Percentage of households that have access to a household toilet or latrine, evaluated on a monthly basis}
+  \item{persons_per_toilet}{Number of persons per toilet latrine}
+  \item{persons_per_shower}{Number of persons per bath shower}
+  \item{persons_per_hygiene_promoter}{Number of persons per hygiene promoter}
+  \item{refugee_pop}{Refugee Population}
+  \item{reporting_monthly}{Monthly Reporting Period Indicator}
+  \item{liters_per_person_household}{Average water (litres) collected per household per day}
+  \item{potable_water_storage_10l}{Percentage of households with at least 10 litres of water storage capacity}
+  \item{protected_water_sources}{Percentage of households collecting water from sheltered and treated sources}
+  \item{menstrual_hygiene_satisfaction}{Percentage of women of reproductive age satisfied with facilities for management of menstrual hygiene and waste}
+  \item{household_toilet}{Percentage of households with a latrine}
+  \item{defecate_in_toilet}{Percentage of households defecating in a toilet}
+  \item{access_to_soap}{Percentage of households with access to soap}
+  \item{solid_waste_disposal_access}{Percentage of households with access to a waste disposal facility}
+  \item{reporting_annual}{Annual Reporting Period Indicator}
 }
+}
+\source{
+UNHCR WASH dashboard / Information Management System (IRIS), formerly at
+  <https://wash.unhcr.org/dashboard/data/unhcr_irhis_all_data.csv> (retired; data
+  now in the login-gated iRHIS portal at <https://his.unhcr.org>).
 }
 \usage{
 unhcrwash
 }
 \description{
-This is a dataset on WASH indicators in refugee camps and settlements. The data is collected from the UNHCR Information Management System (IRIS) and is available on the UNHCR WASH dashboard. This dataset includes data from 191 sites and 29 countries.
+This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries. The source dashboard has since been retired, so this dataset is a fixed historical snapshot (2013 to 2024) that can no longer be regenerated. See the package README for details.
 }
 \keyword{datasets}

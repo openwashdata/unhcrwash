@@ -1,0 +1,230 @@
+# unhcrwash
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14185117.svg)](https://zenodo.org/doi/10.5281/zenodo.14185117)
+
+The goal of unhcrwash is to make available data on WASH indicators in
+refugee camps and settlements.
+
+## Data source and status
+
+This dataset was collected from the UNHCR Information Management System
+(IRIS) and was published on the UNHCR WASH dashboard. **That source is
+no longer available.** The former download URL,
+`https://wash.unhcr.org/dashboard/data/unhcr_irhis_all_data.csv`, now
+returns an HTTP redirect to a UNHCR handbook page rather than a CSV. The
+whole `wash.unhcr.org` dashboard has been retired, and the underlying
+data has moved into the login-gated iRHIS portal at
+[his.unhcr.org](https://his.unhcr.org).
+
+**An up-to-date version of this dataset can therefore no longer be
+generated** from the original source. The data shipped here is a fixed
+historical snapshot covering 227 sites and 36 countries from 2013 to
+2024.
+
+The reason for the login is access control at the iRHIS system level,
+applied under UNHCR’s [General Policy on Personal Data Protection and
+Privacy
+(UNHCR/HCP/2022/02)](https://emergency.unhcr.org/sites/default/files/2023-10/UNHCR-HCP-2022-02%20General%20Policy%20on%20Personal%20Data%20Protection%20and%20Privacy.pdf).
+iRHIS also holds health and nutrition data, and UNHCR controls access to
+the platform as a whole.
+
+**The data in this package is not itself sensitive.** Every record is a
+site-level aggregate WASH indicator (for example, persons per toilet,
+litres of water per person per day, percentage of households with access
+to soap). It contains no personal data, no individual or household
+records, and no geocoordinates, so it carries no data-protection concern
+and is appropriate to publish as open data.
+
+## Installation
+
+You can install the development version of unhcrwash from
+[GitHub](https://github.com/) with:
+
+``` r
+
+# install.packages("devtools")
+devtools::install_github("openwashdata/unhcrwash")
+```
+
+``` r
+
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+| dataset | CSV | XLSX |
+|:---|:---|:---|
+| unhcrwash | [Download CSV](https://github.com/openwashdata/unhcrwash/raw/main/inst/extdata/unhcrwash.csv) | [Download XLSX](https://github.com/openwashdata/unhcrwash/raw/main/inst/extdata/unhcrwash.xlsx) |
+
+## Data
+
+The package provides access to WASH indicators in refugee camps and
+settlements
+
+``` r
+
+library(unhcrwash)
+```
+
+### unhcrwash
+
+The dataset `unhcrwash` contains data about WASH indicators in refugee
+camps and settlements. It has 6425 observations and 27 variables
+
+``` r
+
+unhcrwash |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+| form_id | start_date | end_date | location_id | location_name | country | post_emergency | persons_per_handpump | persons_per_tap | liters_per_person_per_day | non_chlorinated_0_cfu | chlorinated_safe_water_quality | households_with_toilet | persons_per_toilet | persons_per_shower | persons_per_hygiene_promoter | refugee_pop | reporting_monthly | liters_per_person_household | potable_water_storage_10l | protected_water_sources | menstrual_hygiene_satisfaction | household_toilet | defecate_in_toilet | access_to_soap | solid_waste_disposal_access | reporting_annual |
+|---:|---:|---:|---:|:---|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 54418187 | 2024-01-01 | 2024-12-31 | 518 | Dagahaley | Kenya | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 18.2 | 99 | 98 | 64 | 42 | 83 | 87 | 96 | 2024-05-17 |
+| 54418188 | 2024-01-01 | 2024-12-31 | 519 | Hagadera | Kenya | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 13.4 | 98 | 97 | 72 | 39 | 91 | 75 | 99 | 2024-05-17 |
+| 54418189 | 2024-01-01 | 2024-12-31 | 520 | Ifo | Kenya | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 15.0 | 99 | 87 | 63 | 43 | 89 | 69 | 95 | 2024-05-17 |
+
+For an overview of the variable names, see the following table.
+
+| variable_name | variable_type | description |
+|:---|:---|:---|
+| form_id | double | Unique Identifier for the form |
+| start_date | date | Start Date for the data collection |
+| end_date | date | End date for the data collection |
+| location_id | double | Unique Identifier for the location of the refugee camp |
+| location_name | character | Name of the location of the refugee camp |
+| country | character | Country in which the refugee camp is located |
+| post_emergency | character | If emergency is ongoing or not (Emergency or Post Emergency) |
+| persons_per_handpump | double | No. of persons per usable handpump well spring |
+| persons_per_tap | double | Number of persons per unit of usable tap water source |
+| liters_per_person_per_day | double | Average number of litres of potable water available per person per day |
+| non_chlorinated_0_cfu | double | Percentage of water quality tests conducted at non-chlorinated water collection points that returned results with 0 colony-forming units (CFU) per 100 milliliters |
+| chlorinated_safe_water_quality | double | Percentage of water quality tests at chlorinated collection points where the Free Residual Chlorine (FRC) levels were within the range of 0.2 to 2 mg per L, and turbidity was less than or equal to 5 NTU (Nephelometric Turbidity Units) |
+| households_with_toilet | double | Percentage of households that have access to a household toilet or latrine, evaluated on a monthly basis |
+| persons_per_toilet | double | Number of persons per toilet latrine |
+| persons_per_shower | double | Number of persons per bath shower |
+| persons_per_hygiene_promoter | double | Number of persons per hygiene promoter |
+| refugee_pop | double | Refugee Population |
+| reporting_monthly | double | Monthly Reporting Period |
+| liters_per_person_household | double | Average water (litres) collected per household per day |
+| potable_water_storage_10l | double | Percentage of households with at least 10 litres of water storage capacity |
+| protected_water_sources | double | Percentage of households collecting water from sheltered and treated sources |
+| menstrual_hygiene_satisfaction | double | Percentage of women of reproductive age satisfied with facilities for management of menstrual hygiene and waste |
+| household_toilet | double | Percentage of households with a latrine |
+| defecate_in_toilet | double | Percentage of households defecating in a toilet |
+| access_to_soap | double | Percentage of households with access to soap |
+| solid_waste_disposal_access | double | Percentage of households with access to a waste disposal facility |
+| reporting_annual | date | Annual Reporting Period |
+
+## Example
+
+``` r
+
+library(unhcrwash)
+
+# Average Water Availability by Country 
+unhcrwash |> dplyr::group_by(country) |> 
+  dplyr::summarise(avg_water_avail = mean(liters_per_person_per_day, na.rm = TRUE)) |> 
+  dplyr::arrange(desc(avg_water_avail)) |> 
+  head(5) |> 
+  gt::gt() |> 
+  gt::as_raw_html()
+```
+
+| country                          | avg_water_avail |
+|:---------------------------------|----------------:|
+| Iraq                             |        99.06584 |
+| Democratic Republic of the Congo |        43.85081 |
+| Jordan                           |        40.07407 |
+| Ghana                            |        38.13077 |
+| Bangladesh                       |        35.86667 |
+
+``` r
+
+library(ggplot2)
+# Toilet availability
+unhcrwash |> 
+  dplyr::mutate(year = lubridate::year(as.Date(start_date))) |>  # Extract year as whole number
+  dplyr::filter(!is.na(year) & !is.na(persons_per_toilet)) |>    # Remove missing values
+  dplyr::group_by(year) |> 
+  dplyr::summarise(avg_persons_per_toilet = mean(persons_per_toilet, na.rm = TRUE)) |> 
+  ggplot2::ggplot(aes(x = year, y = avg_persons_per_toilet)) +
+  ggplot2::geom_line() +
+  ggplot2::labs(title = "Average Persons per Toilet in Refugee Camps",
+                x = "Year",
+                y = "Average persons per toilet") +
+  ggplot2::theme_minimal()
+```
+
+![](reference/figures/README-unnamed-chunk-8-1.png)
+
+``` r
+
+# Countries with highest refugee populations
+unhcrwash |> 
+  dplyr::group_by(country) |> 
+  dplyr::summarise(total_population = sum(refugee_pop, na.rm = TRUE)) |> 
+  dplyr::arrange(desc(total_population)) |> 
+  head(5) |> 
+  gt::gt() |> 
+  gt::as_raw_html()
+```
+
+| country  | total_population |
+|:---------|-----------------:|
+| Uganda   |         33730168 |
+| Ethiopia |         30630168 |
+| Kenya    |         18034151 |
+| Chad     |         15437507 |
+| Sudan    |         12848789 |
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/unhcrwash/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+``` r
+
+citation("unhcrwash")
+#> To cite package 'unhcrwash' in publications use:
+#> 
+#>   Schöbitz L, Dubey Y (2026). "unhcrwash: WASH Data From Refugee Camps
+#>   and Settlements (UNHCR)." doi:10.5281/zenodo.14185117
+#>   <https://doi.org/10.5281/zenodo.14185117>.
+#>   <https://github.com/openwashdata/unhcrwash>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Misc{unhcrwash:2026,
+#>     title = {unhcrwash: WASH Data From Refugee Camps and Settlements (UNHCR)},
+#>     year = {2026},
+#>     author = {Lars Schöbitz and Yash Dubey},
+#>     doi = {10.5281/zenodo.14185117},
+#>     url = {https://github.com/openwashdata/unhcrwash},
+#>     abstract = {This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries.},
+#>     version = {0.2.0},
+#>   }
+```
+
+# Package index
+
+## All functions
+
+- [`unhcrwash`](https://github.com/openwashdata/unhcrwash/reference/unhcrwash.md)
+  : unhcrwash: Refugee Camp WASH indicators data from the United Nations
+  High Commissioner for Refugees
+
