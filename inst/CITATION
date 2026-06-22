@@ -9,5 +9,5 @@ bibentry(
   doi = "10.5281/zenodo.14185117",
   url = "https://github.com/openwashdata/unhcrwash",
   abstract = "This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries.",
-  version = "0.2.0"
+  version = "1.1.0"
 )

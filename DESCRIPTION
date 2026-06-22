@@ -1,7 +1,7 @@
 Package: unhcrwash
 Type: Package
 Title: WASH Data From Refugee Camps and Settlements (UNHCR)
-Version: 0.2.0
+Version: 1.1.0
 Description: This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries. The source dashboard has since been retired and the data now sits behind the login-gated iRHIS portal, so this dataset is a fixed historical snapshot (2013 to 2024) that can no longer be regenerated.
 License: CC BY 4.0
 Encoding: UTF-8

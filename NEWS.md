@@ -1,4 +1,6 @@
-# unhcrwash 0.2.0
+# unhcrwash 1.1.0
+
+This is the first release since the initial `v1.0.0` GitHub release (2024-11-19). It carries the maintainer handover, metadata corrections, and data-source status notes described below.
 
 ## Maintainer and authorship
 
