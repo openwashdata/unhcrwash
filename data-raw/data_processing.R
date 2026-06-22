@@ -1,5 +1,14 @@
 # Description ------------------------------------------------------------------
 # R script to process uploaded raw data into a tidy, analysis-ready data frame
+#
+# IMPORTANT (as of 2026-06): The source URL below no longer works. The UNHCR WASH
+# dashboard at wash.unhcr.org has been retired; the URL now returns an HTTP 301
+# redirect to a handbook page (HTML, not CSV). The data moved into the
+# login-gated iRHIS portal (https://his.unhcr.org) under UNHCR's General Policy
+# on Personal Data Protection and Privacy (UNHCR/HCP/2022/02), applied at the
+# system level. This script is therefore retained for provenance only and can no
+# longer be re-run; the shipped dataset is a fixed historical snapshot (2013 to
+# 2024). The guard below makes an accidental run fail loudly with an explanation.
 # Load packages ----------------------------------------------------------------
 ## Run the following code in console if you don't have the packages
 ## install.packages(c("usethis", "fs", "here", "readr", "openxlsx"))
@@ -14,6 +23,17 @@ library(tidyverse)
 
 # Read data --------------------------------------------------------------------
 url <- "https://wash.unhcr.org/dashboard/data/unhcr_irhis_all_data.csv"
+
+# This source is dead (see header). The guard prevents an accidental run from
+# silently parsing the redirect HTML. Remove the stop() only if a working
+# replacement source becomes available.
+stop(
+  "The UNHCR WASH dashboard source URL has been retired and no longer serves a ",
+  "CSV (it now redirects to an HTML handbook page). The data is in the ",
+  "login-gated iRHIS portal (https://his.unhcr.org). This dataset cannot be ",
+  "regenerated; the shipped version is a fixed historical snapshot (2013-2024)."
+)
+
 unhcrwash <- readr::read_csv(url, show_col_types = FALSE)
 
 # Tidy data --------------------------------------------------------------------

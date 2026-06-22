@@ -14,6 +14,36 @@
 The goal of unhcrwash is to make available data on WASH indicators in
 refugee camps and settlements.
 
+## Data source and status
+
+This dataset was collected from the UNHCR Information Management System
+(IRIS) and was published on the UNHCR WASH dashboard. **That source is
+no longer available.** The former download URL,
+`https://wash.unhcr.org/dashboard/data/unhcr_irhis_all_data.csv`, now
+returns an HTTP redirect to a UNHCR handbook page rather than a CSV. The
+whole `wash.unhcr.org` dashboard has been retired, and the underlying
+data has moved into the login-gated iRHIS portal at
+[his.unhcr.org](https://his.unhcr.org).
+
+**An up-to-date version of this dataset can therefore no longer be
+generated** from the original source. The data shipped here is a fixed
+historical snapshot covering 227 sites and 36 countries from 2013 to
+2024.
+
+The reason for the login is access control at the iRHIS system level,
+applied under UNHCR’s [General Policy on Personal Data Protection and
+Privacy
+(UNHCR/HCP/2022/02)](https://emergency.unhcr.org/sites/default/files/2023-10/UNHCR-HCP-2022-02%20General%20Policy%20on%20Personal%20Data%20Protection%20and%20Privacy.pdf).
+iRHIS also holds health and nutrition data, and UNHCR controls access to
+the platform as a whole.
+
+**The data in this package is not itself sensitive.** Every record is a
+site-level aggregate WASH indicator (for example, persons per toilet,
+litres of water per person per day, percentage of households with access
+to soap). It contains no personal data, no individual or household
+records, and no geocoordinates, so it carries no data-protection concern
+and is appropriate to publish as open data.
+
 ## Installation
 
 You can install the development version of unhcrwash from
@@ -63,7 +93,7 @@ unhcrwash |>
   gt::as_raw_html()
 ```
 
-<div id="xgqsyrrlbh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="xhzrznmchk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -179,8 +209,7 @@ unhcrwash |>
 <td headers="solid_waste_disposal_access" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">95</td>
 <td headers="reporting_annual" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">2024-05-17</td></tr>
   </tbody>
-  &#10;  
-</table>
+  &#10;</table>
 </div>
 
 For an overview of the variable names, see the following table.
@@ -188,327 +217,556 @@ For an overview of the variable names, see the following table.
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_name
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_type
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 description
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 form_id
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Unique Identifier for the form
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-date_start
+
+start_date
 </td>
+
 <td style="text-align:left;">
-double
+
+date
 </td>
+
 <td style="text-align:left;">
+
 Start Date for the data collection
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-date_end
+
+end_date
 </td>
+
 <td style="text-align:left;">
-double
+
+date
 </td>
+
 <td style="text-align:left;">
+
 End date for the data collection
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_id
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Unique Identifier for the location of the refugee camp
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_name
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Name of the location of the refugee camp
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-country_name
+
+country
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Country in which the refugee camp is located
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-emergency_post_emergency
+
+post_emergency
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 If emergency is ongoing or not (Emergency or Post Emergency)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-number_of_persons_per_usable_handpump_well_spring
+
+persons_per_handpump
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 No. of persons per usable handpump well spring
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-number_of_persons_per_usable_water_tap
+
+persons_per_tap
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Number of persons per unit of usable tap water source
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-average_number_liters_of_potable_water_available_per_person_per_day
+
+liters_per_person_per_day
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Average number of litres of potable water available per person per day
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_water_quality_tests_at_non_chlorinated_water_collection_locations_with_0_cfu_100ml
+
+non_chlorinated_0_cfu
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of water quality tests conducted at non-chlorinated water
 collection points that returned results with 0 colony-forming units
 (CFU) per 100 milliliters
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_of_water_quality_tests_at_chlorinated_collection_locations_with_frc_in_the_range_0_2_2mg_l_and_turbidity_5ntu5
+
+chlorinated_safe_water_quality
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of water quality tests at chlorinated collection points where
 the Free Residual Chlorine (FRC) levels were within the range of 0.2 to
 2 mg per L, and turbidity was less than or equal to 5 NTU (Nephelometric
 Turbidity Units)
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_households_with_household_toilet_latrine_monthly
+
+households_with_toilet
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of households that have access to a household toilet or
 latrine, evaluated on a monthly basis
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-number_of_persons_per_toilet_latrine
+
+persons_per_toilet
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Number of persons per toilet latrine
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-number_of_persons_per_bath_shelter_shower
+
+persons_per_shower
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Number of persons per bath shower
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-number_of_persons_per_hygiene_promoter
+
+persons_per_hygiene_promoter
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Number of persons per hygiene promoter
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-refugee_population
+
+refugee_pop
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Refugee Population
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-reporting_period_monthly_indicator
+
+reporting_monthly
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Monthly Reporting Period
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-average_number_l_p_d_of_potable_water_collected_at_household_level
+
+liters_per_person_household
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Average water (litres) collected per household per day
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_households_with_at_least_10_liters_person_potable_water_storage_capacity
+
+potable_water_storage_10l
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of households with at least 10 litres of water storage
 capacity
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_households_collecting_drinking_water_from_protected_treated_sources
+
+protected_water_sources
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of households collecting water from sheltered and treated
 sources
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_of_women_of_reproductive_age_who_are_satisfied_with_menstrual_hygiene_management_materials_and_facilities
+
+menstrual_hygiene_satisfaction
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of women of reproductive age satisfied with facilities for
 management of menstrual hygiene and waste
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_households_with_household_toilet_latrine
+
+household_toilet
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of households with a latrine
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_households_reporting_defecating_in_a_toilet
+
+defecate_in_toilet
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of households defecating in a toilet
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_households_with_access_to_soap
+
+access_to_soap
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of households with access to soap
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-percent_households_with_access_to_solid_waste_disposal_facility
+
+solid_waste_disposal_access
 </td>
+
 <td style="text-align:left;">
+
 double
 </td>
+
 <td style="text-align:left;">
+
 Percentage of households with access to a waste disposal facility
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
-reporting_period_annual_indicator
+
+reporting_annual
 </td>
+
 <td style="text-align:left;">
-double
+
+date
 </td>
+
 <td style="text-align:left;">
+
 Annual Reporting Period
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
 
 </div>
@@ -527,7 +785,7 @@ unhcrwash |> dplyr::group_by(country) |>
   gt::as_raw_html()
 ```
 
-<div id="gjvygguawh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="eolpxfkcwn" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -547,8 +805,7 @@ unhcrwash |> dplyr::group_by(country) |>
     <tr style="border-style: none;"><td headers="country" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Bangladesh</td>
 <td headers="avg_water_avail" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">35.86667</td></tr>
   </tbody>
-  &#10;  
-</table>
+  &#10;</table>
 </div>
 
 ``` r
@@ -567,7 +824,7 @@ unhcrwash |>
   ggplot2::theme_minimal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" style="display: block; margin: auto;" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" alt="" width="100%" style="display: block; margin: auto;" />
 
 ``` r
 # Countries with highest refugee populations
@@ -580,7 +837,7 @@ unhcrwash |>
   gt::as_raw_html()
 ```
 
-<div id="zdldikqtwu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ovomqjilpm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -600,8 +857,7 @@ unhcrwash |>
     <tr style="border-style: none;"><td headers="country" class="gt_row gt_left" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: left;" valign="middle" align="left">Sudan</td>
 <td headers="total_population" class="gt_row gt_right" style="border-style: none; padding-top: 8px; padding-bottom: 8px; padding-left: 5px; padding-right: 5px; margin: 10px; border-top-style: solid; border-top-width: 1px; border-top-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3; vertical-align: middle; overflow-x: hidden; text-align: right; font-variant-numeric: tabular-nums;" valign="middle" align="right">12848789</td></tr>
   </tbody>
-  &#10;  
-</table>
+  &#10;</table>
 </div>
 
 ## License
@@ -617,20 +873,20 @@ Please cite this package using:
 citation("unhcrwash")
 #> To cite package 'unhcrwash' in publications use:
 #> 
-#>   Dubey Y (2024). "unhcrwash: WASH Data From Refugee Camps and
-#>   Settlements (UNHCR)." doi:10.5281/zenodo.14185117
-#>   <https://doi.org/10.5281/zenodo.14185117>,
+#>   Schöbitz L, Dubey Y (2026). "unhcrwash: WASH Data From Refugee Camps
+#>   and Settlements (UNHCR)." doi:10.5281/zenodo.14185117
+#>   <https://doi.org/10.5281/zenodo.14185117>.
 #>   <https://github.com/openwashdata/unhcrwash>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Misc{unhcrwashwash:2024,
+#>   @Misc{unhcrwash:2026,
 #>     title = {unhcrwash: WASH Data From Refugee Camps and Settlements (UNHCR)},
-#>     year = {2024},
-#>     author = {Yash Dubey},
+#>     year = {2026},
+#>     author = {Lars Schöbitz and Yash Dubey},
 #>     doi = {10.5281/zenodo.14185117},
 #>     url = {https://github.com/openwashdata/unhcrwash},
-#>     abstract = {This is a dataset on WASH indicators in refugee camps and settlements. The data is collected from the UNHCR Information Management System (IRIS) and is available on the UNHCR WASH dashboard. This dataset includes data from 191 sites and 29 countries.},
-#>     version = {0.1.0},
+#>     abstract = {This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries.},
+#>     version = {0.2.0},
 #>   }
 ```

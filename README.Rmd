@@ -34,6 +34,17 @@ knitr::opts_chunk$set(
 
 The goal of unhcrwash is to make available data on WASH indicators in refugee camps and settlements.
 
+## Data source and status
+
+This dataset was collected from the UNHCR Information Management System (IRIS) and was published on the UNHCR WASH dashboard. **That source is no longer available.** The former download URL,
+`https://wash.unhcr.org/dashboard/data/unhcr_irhis_all_data.csv`, now returns an HTTP redirect to a UNHCR handbook page rather than a CSV. The whole `wash.unhcr.org` dashboard has been retired, and the underlying data has moved into the login-gated iRHIS portal at [his.unhcr.org](https://his.unhcr.org).
+
+**An up-to-date version of this dataset can therefore no longer be generated** from the original source. The data shipped here is a fixed historical snapshot covering 227 sites and 36 countries from 2013 to 2024.
+
+The reason for the login is access control at the iRHIS system level, applied under UNHCR's [General Policy on Personal Data Protection and Privacy (UNHCR/HCP/2022/02)](https://emergency.unhcr.org/sites/default/files/2023-10/UNHCR-HCP-2022-02%20General%20Policy%20on%20Personal%20Data%20Protection%20and%20Privacy.pdf). iRHIS also holds health and nutrition data, and UNHCR controls access to the platform as a whole.
+
+**The data in this package is not itself sensitive.** Every record is a site-level aggregate WASH indicator (for example, persons per toilet, litres of water per person per day, percentage of households with access to soap). It contains no personal data, no individual or household records, and no geocoordinates, so it carries no data-protection concern and is appropriate to publish as open data.
+
 ## Installation
 
 You can install the development version of unhcrwash from
