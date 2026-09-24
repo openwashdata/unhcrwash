@@ -2,17 +2,20 @@ Package: unhcrwash
 Type: Package
 Title: WASH Data From Refugee Camps and Settlements (UNHCR)
 Version: 1.1.0
-Description: This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries. The source dashboard has since been retired and the data now sits behind the login-gated iRHIS portal, so this dataset is a fixed historical snapshot (2013 to 2024) that can no longer be regenerated.
+Description: This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 226 sites and 35 countries. The source dashboard has since been retired and the data now sits behind the login-gated iRHIS portal, so this dataset is a fixed historical snapshot (2013 to 2024) that can no longer be regenerated.
 License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
 Depends:
     R (>= 2.10)
 Language: en-GB
-Config/Needs/website: rmarkdown
+Config/Needs/website: rmarkdown, dplyr, ggplot2, gt, kableExtra, knitr, lubridate, readr, stringr
 Date: 2026-06-22
 URL: https://github.com/openwashdata/unhcrwash
 BugReports: https://github.com/openwashdata/unhcrwash/issues
+X-schema.org-keywords: open data, washdata, refugee camps, refugee settlements, humanitarian WASH, water supply, sanitation, hygiene, UNHCR
+X-schema.org-spatialCoverage: Refugee camps and settlements in 35 countries in Africa, the Middle East, Asia and Latin America
+X-schema.org-temporalCoverage: 2013-09-30/2024-12-31
 Authors@R:
     c(person("Lars", "Schöbitz", , "lschoebitz@ethz.ch",
              role = c("aut", "cre"),

@@ -6,3 +6,7 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^CITATION\.cff$
+^\.github$
+^data/metadata$
+^prompts$
