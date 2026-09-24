@@ -8,3 +8,5 @@
 ^pkgdown$
 ^CITATION\.cff$
 ^\.github$
+^data/metadata$
+^prompts$
