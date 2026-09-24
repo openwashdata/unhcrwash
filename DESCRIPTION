@@ -9,7 +9,7 @@ LazyData: true
 Depends:
     R (>= 2.10)
 Language: en-GB
-Config/Needs/website: rmarkdown
+Config/Needs/website: rmarkdown, dplyr, ggplot2, gt, kableExtra, knitr, lubridate, readr, stringr
 Date: 2026-06-22
 URL: https://github.com/openwashdata/unhcrwash
 BugReports: https://github.com/openwashdata/unhcrwash/issues
