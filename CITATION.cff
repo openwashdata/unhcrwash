@@ -1,27 +1,46 @@
-# --------------------------------------------
-# CITATION file created with {cffr} R package
+# ------------------------------------------------
+# CITATION.cff file created with {cffr} R package
 # See also: https://docs.ropensci.org/cffr/
-# --------------------------------------------
-
+# ------------------------------------------------
+ 
 cff-version: 1.2.0
 message: 'To cite package "unhcrwash" in publications use:'
-type: software
+type: dataset
 license: CC-BY-4.0
 title: 'unhcrwash: WASH Data From Refugee Camps and Settlements (UNHCR)'
 version: 1.1.0
-doi: '10.5281/zenodo.14185117'
+doi: 10.5281/zenodo.14185116
 abstract: This is a dataset on WASH indicators in refugee camps and settlements. The
   data was collected from the UNHCR Information Management System (IRIS) and was available
   on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries.
+  The source dashboard has since been retired and the data now sits behind the login-gated
+  iRHIS portal, so this dataset is a fixed historical snapshot (2013 to 2024) that
+  can no longer be regenerated.
+authors:
+- family-names: Schöbitz
+  given-names: Lars
+  email: lschoebitz@ethz.ch
+  orcid: https://orcid.org/0000-0003-2196-5015
+- family-names: Dubey
+  given-names: Yash
+  email: ydubey@ethz.ch
+  orcid: https://orcid.org/0009-0001-2849-970X
 repository-code: https://github.com/openwashdata/unhcrwash
 url: https://github.com/openwashdata/unhcrwash
 date-released: '2026-06-22'
-authors:
-  - family-names: Schöbitz
-    given-names: Lars
-    email: lschoebitz@ethz.ch
-    orcid: https://orcid.org/0000-0003-2196-5015
-  - family-names: Dubey
-    given-names: Yash
-    email: ydubey@ethz.ch
-    orcid: https://orcid.org/0009-0001-2849-970X
+contact:
+- family-names: Schöbitz
+  given-names: Lars
+  email: lschoebitz@ethz.ch
+  orcid: https://orcid.org/0000-0003-2196-5015
+keywords:
+- open data
+- washdata
+- refugee camps
+- refugee settlements
+- humanitarian WASH
+- water supply
+- sanitation
+- hygiene
+- UNHCR
+

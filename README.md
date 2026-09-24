@@ -8,7 +8,7 @@
 [![License: CC BY
 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14185117.svg)](https://zenodo.org/doi/10.5281/zenodo.14185117)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14185116.svg)](https://zenodo.org/doi/10.5281/zenodo.14185116)
 <!-- badges: end -->
 
 The goal of unhcrwash is to make available data on WASH indicators in
@@ -93,7 +93,7 @@ unhcrwash |>
   gt::as_raw_html()
 ```
 
-<div id="ckmjmlqgvx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ttynhmcvgs" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -785,7 +785,7 @@ unhcrwash |> dplyr::group_by(country) |>
   gt::as_raw_html()
 ```
 
-<div id="dfgwzajwwd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ezjhlekvyh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -837,7 +837,7 @@ unhcrwash |>
   gt::as_raw_html()
 ```
 
-<div id="gfgznltnal" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="qyyrvjspto" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -874,19 +874,20 @@ citation("unhcrwash")
 #> To cite package 'unhcrwash' in publications use:
 #> 
 #>   Schöbitz L, Dubey Y (2026). "unhcrwash: WASH Data From Refugee Camps
-#>   and Settlements (UNHCR)." doi:10.5281/zenodo.14185117
-#>   <https://doi.org/10.5281/zenodo.14185117>.
+#>   and Settlements (UNHCR)." doi:10.5281/zenodo.14185116
+#>   <https://doi.org/10.5281/zenodo.14185116>.
 #>   <https://github.com/openwashdata/unhcrwash>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
-#>   @Misc{unhcrwash:2026,
+#>   @Misc{schobitz_etall:2026,
 #>     title = {unhcrwash: WASH Data From Refugee Camps and Settlements (UNHCR)},
-#>     year = {2026},
 #>     author = {Lars Schöbitz and Yash Dubey},
-#>     doi = {10.5281/zenodo.14185117},
+#>     year = {2026},
+#>     doi = {10.5281/zenodo.14185116},
 #>     url = {https://github.com/openwashdata/unhcrwash},
-#>     abstract = {This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries.},
+#>     abstract = {This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries. The source dashboard has since been retired and the data now sits behind the login-gated iRHIS portal, so this dataset is a fixed historical snapshot (2013 to 2024) that can no longer be regenerated.},
+#>     keywords = {open data,washdata,refugee camps,refugee settlements,humanitarian WASH,water supply,sanitation,hygiene,UNHCR},
 #>     version = {1.1.0},
 #>   }
 ```

@@ -1,13 +1,18 @@
-bibentry(
-  bibtype = "Misc",
-  key = "unhcrwash:2026",
-  title = "unhcrwash: WASH Data From Refugee Camps and Settlements (UNHCR)",
-  year = "2026",
-  author = c(
-    person(given = "Lars", family = "Schöbitz", role = c("aut", "cre")),
-    person(given = "Yash", family = "Dubey", role = "aut")),
-  doi = "10.5281/zenodo.14185117",
-  url = "https://github.com/openwashdata/unhcrwash",
-  abstract = "This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries.",
-  version = "1.1.0"
-)
+
+bibentry(bibtype = "Misc",
+         key = "schobitz_etall:2026",
+         title = "unhcrwash: WASH Data From Refugee Camps and Settlements (UNHCR)",
+         author = c(person(given = "Lars",
+                           family = "Schöbitz",
+                           email = "lschoebitz@ethz.ch",
+                           comment = c(ORCID = "0000-0003-2196-5015")),
+                    person(given = "Yash",
+                           family = "Dubey",
+                           email = "ydubey@ethz.ch",
+                           comment = c(ORCID = "0009-0001-2849-970X"))),
+         year = "2026",
+         doi = "10.5281/zenodo.14185116",
+         url = "https://github.com/openwashdata/unhcrwash",
+         abstract = "This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 227 sites and 36 countries. The source dashboard has since been retired and the data now sits behind the login-gated iRHIS portal, so this dataset is a fixed historical snapshot (2013 to 2024) that can no longer be regenerated.",
+         keywords = "open data,washdata,refugee camps,refugee settlements,humanitarian WASH,water supply,sanitation,hygiene,UNHCR",
+         version = "1.1.0")
