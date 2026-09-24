@@ -1,5 +1,5 @@
 
-url: https://github.com/openwashdata/unhcrwash
+url: https://openwashdata.github.io/unhcrwash/
 template:
   bootstrap: 5
   includes:
