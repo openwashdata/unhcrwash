@@ -79,7 +79,7 @@ library(unhcrwash)
 ### unhcrwash
 
 The dataset `unhcrwash` contains data about WASH indicators in refugee
-camps and settlements. It has 6425 observations and 27 variables
+camps and settlements. It has 6423 observations and 27 variables
 
 ``` r
 
@@ -218,6 +218,6 @@ citation("unhcrwash")
 #>     url = {https://github.com/openwashdata/unhcrwash},
 #>     abstract = {This is a dataset on WASH indicators in refugee camps and settlements. The data was collected from the UNHCR Information Management System (IRIS) and was available on the UNHCR WASH dashboard. This dataset includes data from 226 sites and 35 countries. The source dashboard has since been retired and the data now sits behind the login-gated iRHIS portal, so this dataset is a fixed historical snapshot (2013 to 2024) that can no longer be regenerated.},
 #>     keywords = {open data,washdata,refugee camps,refugee settlements,humanitarian WASH,water supply,sanitation,hygiene,UNHCR},
-#>     version = {1.1.0},
+#>     version = {1.1.1},
 #>   }
 ```
