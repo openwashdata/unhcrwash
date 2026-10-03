@@ -9,6 +9,7 @@
 # system level. This script is therefore retained for provenance only and can no
 # longer be re-run; the shipped dataset is a fixed historical snapshot (2013 to
 # 2024). The guard below makes an accidental run fail loudly with an explanation.
+# Later corrections to the snapshot are applied by data-raw/snapshot_fixes.R.
 # Load packages ----------------------------------------------------------------
 ## Run the following code in console if you don't have the packages
 ## install.packages(c("usethis", "fs", "here", "readr", "openxlsx"))
@@ -78,6 +79,11 @@ unhcrwash <- unhcrwash |>
 
 unhcrwash <- unhcrwash |>
   mutate_at(vars(1,8:26), as.numeric)
+
+# Drop rows in which every column is missing (issue #3; for the shipped
+# snapshot this step is applied by data-raw/snapshot_fixes.R)
+unhcrwash <- unhcrwash |>
+  filter(!if_all(everything(), is.na))
 
 
 # Export Data ------------------------------------------------------------------

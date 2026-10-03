@@ -5,7 +5,7 @@
 \alias{unhcrwash}
 \title{unhcrwash: Refugee Camp WASH indicators data from the United Nations High Commissioner for Refugees}
 \format{
-A tibble with 6425 rows and 27 variables
+A tibble with 6423 rows and 27 variables
 \describe{
   \item{form_id}{Unique Identifier for the form}
   \item{start_date}{Start Date for the data collection}
