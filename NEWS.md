@@ -1,3 +1,7 @@
+# unhcrwash 1.1.1
+
+* `unhcrwash` no longer ends with two rows in which every column is missing. The dataset now has 6423 rows instead of 6425. All `form_id` values are present and unique, there is no exact duplicate row, and the data hold 226 sites and 35 countries, as the Description already says. The source is retired, so the fix is applied to the shipped snapshot by the new script `data-raw/snapshot_fixes.R`, which also writes the CSV and XLSX exports again; `data-raw/data_processing.R` gets the same step for the record. No other values change (#3).
+
 # unhcrwash 1.1.0
 
 This is the first release since the initial `v1.0.0` GitHub release (2024-11-19). It carries the maintainer handover, metadata corrections, and data-source status notes described below.
