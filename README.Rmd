@@ -33,6 +33,8 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/openwashdata/unhcrwash/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/unhcrwash/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 The goal of unhcrwash is to make available data on WASH indicators in refugee camps and settlements.
 
 ## Data source and status
