@@ -3,6 +3,8 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14185116.svg)](https://zenodo.org/doi/10.5281/zenodo.14185116)
 [![R-CMD-check](https://github.com/openwashdata/unhcrwash/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/unhcrwash/actions/workflows/R-CMD-check.yaml)
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 The goal of unhcrwash is to make available data on WASH indicators in
 refugee camps and settlements.
 
