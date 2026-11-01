@@ -10,3 +10,5 @@
 ^\.github$
 ^data/metadata$
 ^prompts$
+^_brand\.yml$
+^logos$
